@@ -1,0 +1,25 @@
+@mixin ul-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin title-desktop {
+  margin: 0;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 36px;
+  line-height: 140.6%;
+  font-weight: 400;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+@mixin title-tablet {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 32px;
+}
+
+@mixin title-mobile {
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-size: 28px;
+}
