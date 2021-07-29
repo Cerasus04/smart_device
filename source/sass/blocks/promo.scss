@@ -20,6 +20,7 @@
 
   @media (max-width: $tablet-width) {
     min-height: 647px;
+    padding-top: 270px;
   }
 
   &::after {
@@ -33,17 +34,14 @@
     height: 641px;
 
     @media (max-width: $desktop-width) {
-      // top: 0;
-      // right: -35px;
-      // width: 279px;
       background-image: url("../img/icon/rectangle-tablet.svg");
       top: 0;
       right: -344px;
-
     }
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $mobile-width) {
       background-image: url("../img/icon/rectangle-mobile.svg");
+      right: -500px;
     }
   }
 }
@@ -64,6 +62,11 @@
 
     @media (max-width: $desktop-width) {
       font-size: 60px;
+    }
+
+    @media (max-width: $tablet-width) {
+      font-size: 40px;
+      margin: 0 0 22px;
     }
   }
 
@@ -90,6 +93,13 @@
       line-height: 28px;
     }
 
+    @media (max-width: $tablet-width) {
+      font-size: 16px;
+      width: 100%;
+      margin-bottom: 44px;
+      line-height: 25px;
+    }
+
     &::after {
       position: absolute;
       content: "";
@@ -108,6 +118,13 @@
   @media (max-width: $desktop-width) {
     padding-left: 87px;
     width: 70%;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 15px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
   }
 }
 
@@ -142,6 +159,8 @@
   }
 
   @media (max-width: $tablet-width) {
+    width: 290px;
+    margin-left: 0;
     &--desktop {
       display: none;
     }
@@ -186,16 +205,19 @@
   }
 
   @media (max-width: $tablet-width) {
-    width: 266px;
     height: 305px;
     object-fit: cover;
-    top: -71px;
-    right: -7px;
+    top: 92px;
+    right: -27px;
 
     & img {
       width: 301px;
       height: 220px;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
   }
 }
 

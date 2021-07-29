@@ -48,6 +48,7 @@
   padding-left: 69px;
   padding-top: 6px;
   position: relative;
+  z-index: 10;
 
   & svg {
     position: absolute;
@@ -87,6 +88,7 @@
   width: 80%;
   max-width: 659px;
   margin: 4px 15px 0 0;
+  z-index: 10;
 
   @media (max-width: $desktop-width) {
     max-width: 550px;
