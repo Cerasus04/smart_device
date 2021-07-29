@@ -16,7 +16,7 @@
   // }
 
   @media (max-width: $desktop-width) {
-    padding-top: 53px;
+    padding-top: 57px;
 
     // &::after {
     //   background-image: url("../img/icon/triangles-tablet-mobile.svg");
@@ -40,10 +40,14 @@
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: space-between;
 
-  @media (max-width: $tablet-width) {
-    max-width: 749px;
+  @media (max-width: $desktop-width) {
+    max-width: 723px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: $mobile;
   }
 }
 
@@ -94,9 +98,9 @@
     }
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width) {
     width: 45%;
-    width: 345px;
+    // width: 345px;
     min-height: min-content;
     padding: 21px 23px;
     margin-bottom: 27px;
@@ -112,12 +116,14 @@
     }
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
+    width: 90%;
+    margin: 0 auto 27px;
     padding: 24px 13px 21px 24px;
 
-    &:nth-child(2n + 1) {
-      margin-right: 0;
-    }
+    // &:nth-child(2n + 1) {
+    //   margin-right: 0;
+    // }
 
     & h2 {
       font-size: 20px;
@@ -127,5 +133,9 @@
     & p {
       line-height: 22px;
     }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
   }
 }

@@ -2,13 +2,13 @@
   padding-top: 46px;
   padding-bottom: 111px;
 
-  @media (max-width: $tablet-width) {
-    padding-top: 13px;
+  @media (max-width: $desktop-width) {
+    padding-top: 21px;
     padding-bottom: 84px;
   }
 
-  @media (max-width: $mobile-width) {
-    padding-top: 60px;
+  @media (max-width: $tablet-width) {
+    padding-top: 29px;
     padding-bottom: 65px;
   }
 }
@@ -68,21 +68,22 @@
       top: -2px;
       left: 0;
       height: 356px;
-      // background-image: url("../img/2005@1x.png");
+      background-image: url("../img/2005-tablet@1x.png");
     }
   }
 
   @media (max-width: $tablet-width) {
-    margin: 0 15px;
+    width: 91%;
+    margin: 0 auto;
 
     & h2 {
       font-size: 28px;
-      line-height: 39px;
+      line-height: 34px;
     }
 
     & p {
       &:not(:last-of-type) {
-        margin-bottom: 39px;
+        margin-bottom: 44px;
       }
     }
 
@@ -92,6 +93,20 @@
   }
 }
 
+.about__text-desktop {
+  display: inline;
+
+  @media (max-width: $desktop-width) {
+    display: none;
+  }
+}
+.about__text-tablet {
+  display: none;
+
+  @media (max-width: $desktop-width) {
+    display: inline;
+  }
+}
 .about__btn {
   font-family: $font-family;
   font-weight: 700;
