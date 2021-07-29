@@ -103,5 +103,5 @@ gulp.task('deploy', function (cb) {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'html'));
+gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'webp', 'html'));
 gulp.task('start', gulp.series('build', 'server'));

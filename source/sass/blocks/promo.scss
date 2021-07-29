@@ -1,0 +1,124 @@
+.promo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1566px;
+  min-height: 878px;
+  margin: 272px auto 0;
+  z-index: 10px;
+
+  @media (min-width: $desktop) {
+    width: calc(100% - 19%);
+  }
+
+  @media (max-width: $desktop-width) {
+    min-height: 683px;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-height: 647px;
+  }
+}
+
+.promo__descr {
+  width: 51%;
+  padding-left: 66px;
+
+  & h2 {
+    @include main_title-desktop;
+
+    margin: 42px 0 26px;
+  }
+
+  & p {
+    position: relative;
+    margin: 0 0 45px;
+    padding-left: 98px;
+    max-width: 750px;
+    font-size: 22px;
+    line-height: 34px;
+    color: $white;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 66px;
+      height: 2px;
+      top: 17px;
+      left: 3px;
+      background-color: $white;
+    }
+  }
+}
+
+.promo__btn-call {
+  display: block;
+  width: 56%;
+  margin-left: 97px;
+  padding: 18px 40px 17px;
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $white;
+  background-color: $sky;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: $grey;
+  }
+
+  &--mobile {
+    display: none;
+  }
+
+  @media (max-width: $desktop-width) {
+    &--desktop {
+      display: none;
+    }
+
+    &--mobile {
+      display: block;
+    }
+  }
+}
+
+.promo__link {
+  position: absolute;
+  top: 463px;
+  left: 32px;
+  transform: rotate(270deg);
+  font-size: 14px;
+  color: $white;
+  opacity: 0.5;
+}
+
+.promo__img-wrapper {
+  position: relative;
+  width: 44%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 671px;
+    height: 644px;
+    top: -155px;
+    left: -21px;
+    background-image: url("../img/icon/rectangle-dt.svg");
+    background-repeat: no-repeat;
+    background-size: cover, auto;
+  }
+}
+
+.promo__img {
+  position: absolute;
+  top: -14px;
+  left: -13px;
+
+  @media (max-width: $desktop-width-only) {
+    width: 120%;
+  }
+}

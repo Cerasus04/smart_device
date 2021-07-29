@@ -6,20 +6,32 @@
 
 @mixin title-desktop {
   margin: 0;
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: $font-family;
   font-size: 36px;
   line-height: 140.6%;
   font-weight: 400;
-  letter-spacing: 0%;
+  letter-spacing: 0;
   text-align: left;
 }
 
 @mixin title-tablet {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: $font-family;
   font-size: 32px;
 }
 
 @mixin title-mobile {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: $font-family;
   font-size: 28px;
+}
+
+@mixin main_title-desktop {
+  margin: 0;
+  font-family: $font-family;
+  font-size: 80px;
+  line-height: normal;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-align: left;
+  color: $white;
+  text-transform: uppercase;
 }

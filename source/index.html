@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
-  <h1>Сайт продажи печатных плат</h1>
   <header class="page__header header">
     <div class="container header__container">
       <a class="header__logo">
@@ -45,9 +44,25 @@
     </div>
   </header>
   <main class="page__main main">
-    <section>
-      <div class="container">
-
+    <h1 class="visually-hidden">Сайт продажи печатных плат</h1>
+    <section class="main__promo promo">
+      <div class="promo__descr">
+        <h2>Печатные платы</h2>
+        <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
+        <a class="promo__btn link" href="#">
+          <span class="promo__btn-call promo__btn-call--desktop">Получить бесплатную консультацию</span>
+          <span class="promo__btn-call promo__btn-call--mobile">Бесплатная консультация</span>
+        </a>
+        <a class="promo__link link" href="#">Скролл вниз</a>
+      </div>
+      <div class="promo__img-wrapper">
+        <!-- 1x:705 2x:1410 -->
+        <div class="promo__img">
+          <picture>
+            <source srcset="img/desktop_devices@1x.webp 1x, img/desktop-devices@2x.webp 2x" type="image/webp">
+            <img src="img/desktop_devices@1x.png" srcset="img/desktop-devices@2x.png 2x" alt="Плата" width="705" height="515">
+          </picture>
+      </div>
       </div>
     </section>
     <section>
