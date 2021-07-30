@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -176,9 +176,25 @@
         </ul>
       </div>
     </section>
-    <section>
-      <div class="container">
-
+    <section class="main__feedback feedback">
+      <h2 class="visually-hidden">
+        Форма для получения бесплатной консультации
+      </h2>
+      <div class="feedback__wrapper">
+        <form action="#" class="feedback__form">
+          <legend>Остались вопросы? Задайте их нам!</legend>
+          <p>Мы проконсультируем Вас бесплатно</p>
+          <label for="name" class="visually-hidden">Введите ваше имя</label>
+          <input type="text" id="name" name="name" placeholder="Имя" required="" pattern="[A-Za-zА-Яа-яЁё\s]+$">
+          <label for="tel" class="visually-hidden">Введите ваш телефон</label>
+          <input type="tel" id="tel" name="phone" placeholder="Телефон" required="">
+          <textarea placeholder="Ваш вопрос" name="question"></textarea>
+          <div>
+            <input class="visually-hidden" type="checkbox" name="consent" id="checked" checked="">
+            <label class="feedback__form-checkbox" for="checked">Я согласен на обработку персональных данных</label>
+            <button type="submit">Задать вопрос</button>
+          </div>
+        </form>
       </div>
     </section>
   </main>

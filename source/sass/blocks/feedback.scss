@@ -1,0 +1,306 @@
+.feedback {
+  position: relative;
+  background-color: $sky;
+  padding: 87px 0 112px;
+  background-image: url("../img/icon/rectangle-dt.svg");
+  background-repeat: no-repeat;
+  background-position: 175px -60px, 1556px 35px;
+
+  @media (max-width: $desktop-width) {
+    padding: 80px 0 104px;
+    background-image: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 30px 0 42px;
+  }
+}
+
+.feedback__wrapper {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 1225px;
+  padding: 0 28px;
+  margin: 0 auto;
+
+  @media (max-width: $desktop-width) {
+    justify-content: center;
+    padding: 0;
+  }
+}
+
+.feedback__form {
+  position: relative;
+  width: 570px;
+  min-height: 461px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-between;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    background-image: url("../img/paper-airplane@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    width: 511px;
+    height: 288px;
+    position: absolute;
+    top: 70px;
+    left: -624px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/paper-airplane@2x.png");
+    }
+
+    @media (max-width: $desktop-width) {
+      content: none;
+    }
+  }
+
+  & legend {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 50px;
+    color: $white;
+    width: 100%;
+    margin: 0;
+    margin-left: -4px;
+
+    @media (max-width: $tablet-width) {
+      font-size: 28px;
+    }
+  }
+
+  & p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+    margin: 10px 0 51px;
+    width: 100%;
+  }
+
+  & input:not([type="checkbox"]) {
+    background-color: rgba($white, 0.1);
+    padding: 14px 16px;
+    width: 270px;
+    height: 50px;
+    border: none;
+    color: $white;
+    border-radius: 0;
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgba($white, 0.7);
+      padding: 13px 15px;
+    }
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  & textarea {
+    width: 100%;
+    padding: 13px 16px;
+    margin: 40px 0 43px;
+    min-height: 154px;
+    background-color: rgba($white, 0.1);
+    border: none;
+    color: $white;
+    border-radius: 0;
+    resize: none;
+
+    &:hover,
+    &:focus {
+      border: 1px solid rgba($white, 0.7);
+      padding: 12px 15px;
+    }
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  & button {
+    width: 270px;
+    min-height: 45px;
+    padding: 14px 18px;
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+      color: $sky;
+    }
+
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+  & label[for="checked"] {
+    position: relative;
+    width: 270px;
+    padding-left: 40px;
+    padding-top: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba($white, 0.8);
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: rgba($white, 1);
+    }
+
+    &:active {
+      color: rgba($white, 0.5);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 8px;
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border: 1px solid $white;
+    }
+  }
+
+  & input[type="checkbox"] {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+  }
+
+  & input[type="checkbox"]:focus + label[for="checked"] {
+    outline: 1px solid black;
+    color: rgba($white, 1);
+  }
+
+  & input[type="checkbox"]:checked + label[for="checked"] {
+    &::before {
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-image: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.5 2L3.5 5L8 0.5' stroke='white'/%3E%3C/svg%3E");
+    }
+  }
+
+  & div {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  @media (max-width: $desktop-width) {
+    width: 591px;
+    margin-left: 4px;
+
+    & h2 {
+      font-size: 32px;
+      line-height: 45px;
+      margin-left: -4px;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 15px 0 55px;
+    }
+
+    & input:not([type="checkbox"]) {
+      width: 280px;
+    }
+
+    & textarea {
+      margin-top: 43px;
+      margin-bottom: 45px;
+      min-height: 159px;
+    }
+
+    & button {
+      width: 280px;
+    }
+
+    & label[for="checked"] {
+      width: 280px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding: 0 15px;
+    margin-left: 0;
+
+    & div {
+      flex-direction: column-reverse;
+    }
+
+    & h2 {
+      font-size: 28px;
+      line-height: 39px;
+      margin: 0;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 22px;
+      margin: 13px 0 26px;
+    }
+
+    & input:not([type="checkbox"]) {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    & textarea {
+      margin-top: 0;
+      margin-bottom: 30px;
+      width: 100%;
+      min-height: 104px;
+    }
+
+    & button {
+      width: 100%;
+    }
+
+    & label[for="checked"] {
+      width: 100%;
+      margin-top: 23px;
+      padding-left: 34px;
+
+      &::before {
+        left: 0;
+        width: 17px;
+      }
+    }
+  }
+}
+
+.feedback__form--error {
+  box-shadow: 0 2px 0 red;
+}
+
