@@ -1,10 +1,30 @@
 .about {
+  position: relative;
   padding-top: 46px;
   padding-bottom: 111px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/icon/trangle-big-dt.svg");
+    background-repeat: no-repeat;
+    width: 872px;
+    height: 873px;
+
+    top: -330px;
+    left: -300px;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+
 
   @media (max-width: $desktop-width) {
     padding-top: 12px;
     padding-bottom: 84px;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (max-width: $tablet-width) {
