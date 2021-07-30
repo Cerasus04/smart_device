@@ -3,12 +3,12 @@
   padding-bottom: 111px;
 
   @media (max-width: $desktop-width) {
-    padding-top: 21px;
+    padding-top: 12px;
     padding-bottom: 84px;
   }
 
   @media (max-width: $tablet-width) {
-    padding-top: 29px;
+    padding-top: 0;
     padding-bottom: 65px;
   }
 }
@@ -62,6 +62,7 @@
     & h2 {
       font-size: 32px;
       line-height: 45px;
+      margin-bottom: 27px;
     }
 
     &::after {
@@ -73,10 +74,11 @@
   }
 
   @media (max-width: $tablet-width) {
-    width: 91%;
+    width: 90%;
     margin: 0 auto;
 
     & h2 {
+      margin-bottom: 22px;
       font-size: 28px;
       line-height: 34px;
     }

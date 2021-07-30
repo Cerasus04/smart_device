@@ -38,7 +38,7 @@
 .advantages__wrapper {
   display: flex;
   flex-wrap: wrap;
-  max-width: 1200px;
+  max-width: 1178px;
   margin: 0 auto;
   justify-content: space-between;
 
@@ -56,7 +56,7 @@
   min-height: 299px;
   border: 1px solid $two-white;
   border-left: 3px solid $sky;
-  padding: 40px 42px;
+  padding: 40px 38px;
   margin-bottom: 30px;
   background-color: $white;
   cursor: pointer;
@@ -99,12 +99,10 @@
   }
 
   @media (max-width: $desktop-width) {
-    width: 45%;
-    // width: 345px;
+    width: 48%;
     min-height: min-content;
-    padding: 21px 23px;
+    padding: 21px 24px 24px 23px;
     margin-bottom: 27px;
-    padding-right: 22px;
 
     & h2 {
       margin: 6px 0;
@@ -121,10 +119,6 @@
     margin: 0 auto 27px;
     padding: 24px 13px 21px 24px;
 
-    // &:nth-child(2n + 1) {
-    //   margin-right: 0;
-    // }
-
     & h2 {
       font-size: 20px;
       line-height: 28px;
@@ -137,5 +131,11 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    margin: 6px auto 34px;
+    padding: 21px 13px 24px 24px;
+
+    &:nth-child(2) {
+      padding-right: 10px;
+    }
   }
 }

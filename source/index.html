@@ -106,91 +106,93 @@
         </div>
       </div>
     </section>
-    <section class="main_service service">
-      <h2>Service Device предлагает следующие товары и услуги</h2>
-      <ul class="service__list">
-        <li class="service__item">
-          <div class="service-card">
-            <a class="service-card__link link" href="#">
-              <h3>Производство печатных плат</h3>
-              <picture>
-                <!-- 1х: 290px; 2x: 580px -->
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/mobile_goods1@1x.webp 1x, img/mobile_goods1@2x.webp 2x">
-                <!-- 1х: 720px; 2x: 1430px -->
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/tablet_goods1@1x.webp 1x, img/tablet_goods1@2x.webp 2x">
-                <!-- 1х: 370px; 2x: 740px -->
-                <source type="image/webp"
-                  srcset="img/desktop_goods1@1x.webp 1x, img/desktop_goods1@2x.webp 2x">
-                <!-- 1х: 290px; 2x: 580px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/mobile_goods1@1x.png 1x, img/mobile_goods1@2x.png 2x">
-                <!-- 1х: 720px; 2x: 1430px -->
-                <source media="(max-width: 1023px)"
-                  srcset="img/tablet_goods1@1x.png 1x, img/tablet_goods1@2x.png 2x">
-                <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/desktop_goods1@1x.png" width="370" height="620"
-                  srcset="img/desktop_goods1@2x.png" alt="производство печатных плат">
-              </picture>
-            </a>
-          </div>
-        </li>
-        <li class="service__item">
-          <div class="service-card">
-            <a class="service-card__link link" href="#">
-              <h3>Монтаж печатных плат</h3>
-              <picture>
-                <!-- 1х: 290px; 2x: 580px -->
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/mobile_goods2@1x.webp 1x, img/mobile_goods2@2x.webp 2x">
-                <!-- 1х: 720px; 2x: 1430px -->
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/tablet_goods2@1x.webp 1x, img/tablet_goods2@2x.webp 2x">
-                <!-- 1х: 370px; 2x: 740px -->
-                <source type="image/webp"
-                  srcset="img/desktop_goods2@1x.webp 1x, img/desktop_goods2@2x.webp 2x">
-                <!-- 1х: 290px; 2x: 580px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/mobile_goods2@1x.png 1x, img/mobile_goods2@2x.png 2x">
-                <!-- 1х: 720px; 2x: 1430px -->
-                <source media="(max-width: 1023px)"
-                  srcset="img/tablet_goods2@1x.png 1x, img/tablet_goods2@2x.png 2x">
-                <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/desktop_goods2@1x.png" width="370" height="620"
-                  srcset="img/desktop_goods2@2x.png" alt="монтаж печатных плат">
-              </picture>
-            </a>
-          </div>
-        </li>
-        <li class="service__item">
-          <div class="service-card">
-            <a class="service-card__link link" href="#">
-              <h3>Комлектующие для светотехники</h3>
-              <picture>
-                <!-- 1х: 290px; 2x: 580px -->
-                <source type="image/webp" media="(max-width: 767px)"
-                  srcset="img/mobile_goods3@1x.webp 1x, img/mobile_goods3@2x.webp 2x">
-                <!-- 1х: 720px; 2x: 1430px -->
-                <source type="image/webp" media="(max-width: 1023px)"
-                  srcset="img/tablet_goods3@1x.webp 1x, img/tablet_goods3@2x.webp 2x">
-                <!-- 1х: 370px; 2x: 740px -->
-                <source type="image/webp"
-                  srcset="img/desktop_goods3@1x.webp 1x, img/desktop_goods3@2x.webp 2x">
-                <!-- 1х: 290px; 2x: 580px -->
-                <source media="(max-width: 767px)"
-                  srcset="img/mobile_goods3@1x.png 1x, img/jpg-mobil_goods3e@2x.png 2x">
-                <!-- 1х: 720px; 2x: 1430px -->
-                <source media="(max-width: 1023px)"
-                  srcset="img/tablet_goods3@1x.png 1x, img/tablet_goods3@2x.png 2x">
-                <!-- 1х: 370px; 2x: 740px -->
-                <img src="img/desktop_goods3@1x.png" width="370" height="620"
-                  srcset="img/desktop_goods3@2x.png" alt="комлектующие для светотехники">
-              </picture>
-            </a>
-          </div>
-        </li>
-      </ul>
+    <section class="main__service service">
+      <div class="service__wrapper">
+        <h2>Service Device предлагает следующие товары и услуги</h2>
+        <ul class="service__list">
+          <li class="service__item">
+            <div class="service-card">
+              <a class="service-card__link link" href="#">
+                <h3>Производство печатных плат</h3>
+                <picture>
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <source type="image/webp" media="(max-width: 320px)"
+                    srcset="img/mobile_goods1@1x.webp 1x, img/mobile_goods1@2x.webp 2x">
+                  <!-- 1х: 720px; 2x: 1430px -->
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/tablet_goods1@1x.webp 1x, img/tablet_goods1@2x.webp 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <source type="image/webp"
+                    srcset="img/desktop_goods1@1x.webp 1x, img/desktop_goods1@2x.webp 2x">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/mobile_goods1@1x.png 1x, img/mobile_goods1@2x.png 2x">
+                  <!-- 1х: 720px; 2x: 1430px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/tablet_goods1@1x.png 1x, img/tablet_goods1@2x.png 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img src="img/desktop_goods1@1x.png" width="370" height="620"
+                    srcset="img/desktop_goods1@2x.png" alt="производство печатных плат">
+                </picture>
+              </a>
+            </div>
+          </li>
+          <li class="service__item">
+            <div class="service-card">
+              <a class="service-card__link link" href="#">
+                <h3>Монтаж печатных плат</h3>
+                <picture>
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <source type="image/webp" media="(max-width: 320px)"
+                    srcset="img/mobile_goods2@1x.webp 1x, img/mobile_goods2@2x.webp 2x">
+                  <!-- 1х: 720px; 2x: 1430px -->
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/tablet_goods2@1x.webp 1x, img/tablet_goods2@2x.webp 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <source type="image/webp"
+                    srcset="img/desktop_goods2@1x.webp 1x, img/desktop_goods2@2x.webp 2x">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/mobile_goods2@1x.png 1x, img/mobile_goods2@2x.png 2x">
+                  <!-- 1х: 720px; 2x: 1430px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/tablet_goods2@1x.png 1x, img/tablet_goods2@2x.png 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img src="img/desktop_goods2@1x.png" width="370" height="620"
+                    srcset="img/desktop_goods2@2x.png" alt="монтаж печатных плат">
+                </picture>
+              </a>
+            </div>
+          </li>
+          <li class="service__item">
+            <div class="service-card">
+              <a class="service-card__link link" href="#">
+                <h3>Комплектующие для светотехники</h3>
+                <picture>
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <source type="image/webp" media="(max-width: 320px)"
+                    srcset="img/mobile_goods3@1x.webp 1x, img/mobile_goods3@2x.webp 2x">
+                  <!-- 1х: 720px; 2x: 1430px -->
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/tablet_goods3@1x.webp 1x, img/tablet_goods3@2x.webp 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <source type="image/webp"
+                    srcset="img/desktop_goods3@1x.webp 1x, img/desktop_goods3@2x.webp 2x">
+                  <!-- 1х: 290px; 2x: 580px -->
+                  <source media="(max-width: 767px)"
+                    srcset="img/mobile_goods3@1x.png 1x, img/jpg-mobil_goods3e@2x.png 2x">
+                  <!-- 1х: 720px; 2x: 1430px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/tablet_goods3@1x.png 1x, img/tablet_goods3@2x.png 2x">
+                  <!-- 1х: 370px; 2x: 740px -->
+                  <img src="img/desktop_goods3@1x.png" width="370" height="620"
+                    srcset="img/desktop_goods3@2x.png" alt="комлектующие для светотехники">
+                </picture>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
     <section>
       <div class="container">
