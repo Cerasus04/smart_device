@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 <body class="page">
   <header class="page__header header">
     <div class="container header__container">
-      <a class="header__logo link">
+      <a class="header__logo link" id="top">
         <svg width="202" height="52" viewBox="0 0 202 52">
           <use xlink:href="img/sprite.svg#icon-logo-desktop"></use>
         </svg>
@@ -85,7 +85,7 @@
               <use xlink:href="img/sprite.svg#icon-detective"></use>
             </svg>
             <h2>Полная конфиденциальность</h2>
-            <p>По желанию клиента  мы обеспечиваем полную конфеденциальность.</p>
+            <p>По желанию клиента  мы обеспечиваем полную конфиденциальность.</p>
           </div>
           <div class="advantages__item">
             <svg width="35" height="35" viewBox="0 0 35 35">
@@ -94,8 +94,9 @@
             <h2>Персонализация стоимости</h2>
             <p>Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас устраивает.</p>
           </div>
+        </div>
       </div>
-    </div></section>
+    </section>
     <section class="about">
       <div class="container about__wrapper">
         <div class="about__container">
@@ -182,18 +183,20 @@
       </h2>
       <div class="feedback__wrapper">
         <form action="#" class="feedback__form">
-          <legend>Остались вопросы? Задайте их нам!</legend>
-          <p>Мы проконсультируем Вас бесплатно</p>
-          <label for="name" class="visually-hidden">Введите ваше имя</label>
-          <input type="text" id="name" name="name" placeholder="Имя" required="" pattern="[A-Za-zА-Яа-яЁё\s]+$">
-          <label for="tel" class="visually-hidden">Введите ваш телефон</label>
-          <input type="tel" id="tel" name="phone" placeholder="Телефон" required="">
-          <textarea placeholder="Ваш вопрос" name="question"></textarea>
-          <div>
-            <input class="visually-hidden" type="checkbox" name="consent" id="checked" checked="">
-            <label class="feedback__form-checkbox" for="checked">Я согласен на обработку персональных данных</label>
-            <button type="submit">Задать вопрос</button>
-          </div>
+          <fieldset>
+            <legend>Остались вопросы? Задайте их нам!</legend>
+            <p>Мы проконсультируем Вас бесплатно</p>
+            <label for="name" class="visually-hidden">Введите ваше имя</label>
+            <input type="text" id="name" name="name" placeholder="Имя" required="" pattern="[A-Za-zА-Яа-яЁё\s]+$">
+            <label for="tel" class="visually-hidden">Введите ваш телефон</label>
+            <input type="tel" id="tel" name="phone" placeholder="Телефон" required="">
+            <textarea placeholder="Ваш вопрос" name="question"></textarea>
+            <div>
+              <input class="visually-hidden" type="checkbox" name="consent" id="checked" checked="">
+              <label class="feedback__form-checkbox" for="checked">Я согласен на обработку персональных данных</label>
+              <button type="submit">Задать вопрос</button>
+            </div>
+          </fieldset>
         </form>
       </div>
     </section>
@@ -203,7 +206,7 @@
       <div class="footer__top">
         <section class="footer__header">
           <h2 class="visually-hidden">Логотип и социальные сети</h2>
-          <a class="footer__logo link" aria-label="логотип">
+          <a class="footer__logo link" href="#top" aria-label="логотип">
             <svg width="216" height="52" viewBox="0 0 216 52">
               <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
             </svg>
@@ -228,8 +231,9 @@
           </div>
         </section>
         <section class="footer__sections sections sections--active">
+          <h2 class="visually-hidden">Навигация по разделам</h2>
           <div class="sections__menu">
-            <button class="sections__toggle type=" button"="" aria-label="навигация для открытия выпадающего меню">Разделы сайта
+            <button class="sections__toggle" type="button" aria-label="навигация для открытия выпадающего меню">Разделы сайта
             </button>
           </div>
           <div class="sections__site-block">
@@ -259,6 +263,7 @@
           </div>
         </section>
         <section class="footer__address sections sections--active">
+          <h2 class="visually-hidden">Наши контакты</h2>
           <div class="sections__menu">
             <button class="sections__toggle" type="button" aria-label="навигация для открытия выпадающего меню">Наш офис
             </button>
@@ -307,7 +312,7 @@
       <textarea placeholder="Ваш вопрос" name="question">123</textarea>
       <button type="submit">Отправить</button>
       <input class="visually-hidden" name="consent" type="checkbox" id="modal__checked" checked="">
-      <label class="popup-cal__checked-label" for="modal__checked">Я согласен на обработку персональных данных</label>
+      <label class="modal__checked-label" for="modal__checked">Я согласен на обработку персональных данных</label>
       <button class="modal__close" type="button">
         <svg width="27" height="26" viewBox="0 0 27 26">
           <use xlink:href="img/sprite.svg#icon-modal-close"></use>

@@ -62,6 +62,12 @@
     }
   }
 
+  & fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
   & legend {
     font-family: $font-family;
     font-weight: 400;
@@ -111,6 +117,7 @@
     padding: 13px 16px;
     margin: 40px 0 43px;
     min-height: 154px;
+    font-size: 16px;
     background-color: rgba($white, 0.1);
     border: none;
     color: $white;
