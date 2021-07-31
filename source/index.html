@@ -16,7 +16,7 @@
 <body class="page">
   <header class="page__header header">
     <div class="container header__container">
-      <a class="header__logo">
+      <a class="header__logo link">
         <svg width="202" height="52" viewBox="0 0 202 52">
           <use xlink:href="img/sprite.svg#icon-logo-desktop"></use>
         </svg>
@@ -217,9 +217,121 @@
     </section>
   </main>
   <footer class="page__footer footer">
-    <div class="container">
-
+    <div class="footer__wrapper container">
+      <div class="footer__top">
+        <section class="footer__header">
+          <h2 class="visually-hidden">Логотип и социальные сети</h2>
+          <a class="footer__logo link" aria-label="логотип">
+            <svg width="216" height="52" viewBox="0 0 216 52">
+              <use xlink:href="img/sprite.svg#icon-logo-footer"></use>
+            </svg>
+          </a>
+          <span>1999-2018 SD Service Devices</span>
+          <div class="footer__social-list">
+            <a class="link" href="#" aria-label="ссылка на Facebook">
+              <svg width="27" height="27" viewBox="0 0 27 27">
+                <use xlink:href="img/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+            <a class="link" href="#" aria-label="ссылка на Одноклассники">
+              <svg width="27" height="26" viewBox="0 0 27 26">
+                <use xlink:href="img/sprite.svg#icon-ok"></use>
+              </svg>
+            </a>
+            <a class="link" href="#" aria-label="ссылка на Вконтакте">
+              <svg width="27" height="26" viewBox="0 0 27 26">
+                <use xlink:href="img/sprite.svg#icon-vk"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="footer__sections sections sections--active">
+          <div class="sections__menu">
+            <button  class="sections__toggle type="button" aria-label="навигация для открытия выпадающего меню">Разделы сайта
+            </button>
+          </div>
+          <div class="sections__site-block">
+            <ul class="sections__site-list">
+              <li>
+                <a class="link" href="#" aria-label="перейти к разделу о компании">О компании</a>
+              </li>
+              <li>
+                <a class="link" href="#" aria-label="перейти к разделу продукты">Продукты</a>
+              </li>
+              <li>
+                <a class="link" href="#" aria-label="перейти к разделу производство печатных плат">Производство печатных плат</a>
+              </li>
+              <li>
+                <a class="link" href="#" aria-label="перейти к разделу монтаж печатных плат">Монтаж печатных плат</a>
+              </li>
+              <li>
+                <a class="link" href="#" aria-label="перейти к разделу комплектующие">Комплектующие</a>
+              </li>
+              <li>
+                <a class="link" href="#" aria-label="перейти к разделу доставка">Доставка</a>
+              </li>
+              <li>
+                <a class="link" href="#" aria-label="перейти к разделу контакты">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="footer__address sections sections--active">
+          <div class="sections__menu">
+            <button  class="sections__toggle" type="button" aria-label="навигация для открытия выпадающего меню">Наш офис
+            </button>
+          </div>
+          <div class="sections__site-block">
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            <a class="link" href="tel:+74955894050" aria-label="телефон компании">
+              +7 (495) 589-40-50
+            </a>
+            <a class="link" href="tel:+79250038767" aria-label="телефон компании">
+              +7 (925) 003-87-67
+            </a>
+            <a class="link" href="tel:+79269268079" aria-label="телефон компании">
+              +7 (926) 926-80-79
+            </a>
+          </div>
+        </section>
+      </div>
+      <section class="footer__bottom">
+        <h2 class="visually-hidden">Права и условия</h2>
+        <div class="footer__rights-wrap1">
+          <p>Все права защищены</p>
+          <p>1999-2018 SD Service Devices</p>
+        </div>
+        <div class="footer__rights-wrap2">
+          <a class="link" href="#" aria-label="прочитать условия конфединциальности">Условия конфиденциальности</a>
+          <a class="link" href="#" aria-label="перейти на сайт разработчиков">Developed by wow studio</a>
+        </div>
+      </section>
     </div>
   </footer>
+
+  <div class="overlay"></div>
+  <div class="modal">
+    <form action="#" class="modal__form modal__form--js">
+      <h2>Закажите звонок</h2>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <label for="modal__name">
+        <span class="visually-hidden">Введите ваше имя</span>
+      </label>
+      <input type="text" id="modal__name" name="name" placeholder="Имя" required pattern="[A-Za-zА-Яа-яЁё\s]+$">
+      <label for="modal__tel">
+        <span class="visually-hidden">Введите ваш телефон</span>
+      </label>
+      <input type="tel" id="modal__tel" name="phone" placeholder="Телефон" required>
+      <textarea placeholder="Ваш вопрос" name="question">123</textarea>
+      <button type="submit">Отправить</button>
+      <input class="visually-hidden" name="consent" type="checkbox" id="modal__checked" checked>
+      <label class="popup-cal__checked-label" for="modal__checked">Я согласен на обработку персональных данных</label>
+      <button class="modal__close" type="button">
+        <svg width="27" height="26" viewBox="0 0 27 26">
+          <use xlink:href="img/sprite.svg#icon-modal-close"></use>
+        </svg>
+      </button>
+    </form>
+  </div>
 </body>
 </html>

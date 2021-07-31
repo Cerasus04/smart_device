@@ -6,7 +6,7 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/icon/trangle-big-dt.svg");
+    background-image: url("../img/icon/triangle-big-dt.svg");
     background-repeat: no-repeat;
     width: 872px;
     height: 873px;
@@ -55,7 +55,6 @@
 
   & h2 {
     font-family: $font-family;
-    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 51px;
@@ -64,8 +63,7 @@
   }
 
   & p {
-    font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: $dull-gray;
