@@ -1,7 +1,7 @@
 .feedback {
   position: relative;
   background-color: $sky;
-  padding: 87px 0 112px;
+  padding: 91px 0 112px;
   background-image: url("../img/icon/rectangle-dt.svg");
   background-repeat: no-repeat;
   background-position: 175px -60px, 1556px 35px;
@@ -65,6 +65,7 @@
   & fieldset {
     margin: 0;
     padding: 0;
+    width: 100%;
     border: none;
   }
 
@@ -84,22 +85,22 @@
   }
 
   & p {
+    width: 100%;
+    margin: 10px 0 51px;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: $white;
-    margin: 10px 0 51px;
-    width: 100%;
   }
 
   & input:not([type="checkbox"]) {
-    background-color: rgba($white, 0.1);
-    padding: 14px 16px;
     width: 270px;
     height: 50px;
+    padding: 14px 16px;
     border: none;
     color: $white;
     border-radius: 0;
+    background-color: rgba($white, 0.1);
 
     &:hover,
     &:focus {
@@ -216,7 +217,6 @@
 
   & div {
     display: flex;
-    flex-direction: row-reverse;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
@@ -306,7 +306,9 @@
     }
   }
 }
-
+.feedback__bottom {
+  flex-direction: row-reverse;
+}
 .feedback__form--error {
   box-shadow: 0 2px 0 red;
 }

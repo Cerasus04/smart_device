@@ -22,13 +22,18 @@
   background-color: $sky;
   padding: 30px 39px;
 
-  & h2 {
+  & fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+
+  & legend {
     font-family: $font-family;
     font-weight: 400;
     font-size: 28px;
     line-height: 39px;
     color: $white;
-    margin: 0;
   }
 
   & p {

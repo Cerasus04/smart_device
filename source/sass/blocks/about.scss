@@ -39,7 +39,7 @@
 
 .about__container {
   margin-left: 315px;
-  margin-right: 148px;
+  margin-right: 155px;
 
   &::after {
     content: "";
@@ -63,8 +63,8 @@
   }
 
   & p {
-    font-weight: 400;
     font-size: 16px;
+    font-weight: 400;
     line-height: 22px;
     color: $dull-gray;
 
