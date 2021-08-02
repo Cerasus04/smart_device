@@ -7,7 +7,7 @@
   background-position: 175px -60px, 1556px 35px;
 
   @media (max-width: $desktop-width) {
-    padding: 80px 0 104px;
+    padding: 76px 0 104px;
     background-image: none;
   }
 
@@ -78,6 +78,10 @@
     width: 100%;
     margin: 0;
     margin-left: -4px;
+
+    @media (max-width: $desktop-width) {
+      font-size: 32px;
+    }
 
     @media (max-width: $tablet-width) {
       font-size: 28px;
@@ -240,12 +244,16 @@
 
     & input:not([type="checkbox"]) {
       width: 280px;
+      padding: 10px 19px 14px;
+      font-size: 16px;
     }
 
     & textarea {
       margin-top: 43px;
-      margin-bottom: 45px;
+      margin-bottom: 40px;
       min-height: 159px;
+      padding: 10px 19px;
+      font-size: 18px;
     }
 
     & button {

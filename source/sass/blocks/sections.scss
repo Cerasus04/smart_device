@@ -21,7 +21,6 @@
     text-align: start;
     min-height: 75px;
     margin-bottom: -4px;
-    padding-left: 15px;
 
     &::after {
       // content: "";
@@ -64,20 +63,19 @@
 
   & a {
     color: rgba($dark-gray, 0.5);
+    letter-spacing: -0.05em;
   }
 }
 
 .sections__site-list {
   @include ul-reset;
   column-count: 2;
-  column-gap: 61px;
+  column-gap: 80px;
   min-height: 156px;
 
   @media (max-width: $desktop-width) {
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: min-content;
-    grid-auto-flow: row;
+    // width: 100%;
+    column-count: 1;
   }
 
   @media (max-width: $tablet-width) {
@@ -90,6 +88,10 @@
 
   & li {
     margin-bottom: 8px;
+
+    @media (max-width: $desktop-width) {
+      margin-bottom: 7px;
+    }
   }
 }
 
