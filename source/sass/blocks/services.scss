@@ -7,7 +7,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    padding: 50px 0 63px;
+    padding: 50px 0 65px;
   }
 }
 
@@ -62,6 +62,7 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+    gap: 26px;
   }
 }
 

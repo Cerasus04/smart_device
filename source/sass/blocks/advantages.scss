@@ -45,13 +45,16 @@
   margin: 0 auto;
   justify-content: space-between;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/icon/triangle-mini-dt.svg");
     background-repeat: no-repeat;
+    background-image: url("../img/icon/triangle-mini-dt.svg");
     width: 336px;
     height: 324px;
+  }
+  &::before {
     transform: rotate(180deg);
     bottom: 45px;
     right: 30px;
@@ -59,13 +62,6 @@
   }
 
   &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/icon/triangle-mini-dt.svg");
-    background-repeat: no-repeat;
-    width: 336px;
-    height: 324px;
-
     top: 45px;
     left: 200px;
     z-index: -1;
@@ -168,8 +164,8 @@
 
   @media (max-width: $mobile-width) {
     width: 100%;
-    margin: 6px auto 34px;
-    padding: 21px 13px 24px 24px;
+    margin: 6px auto 18px;
+    padding: 23px 19px 24px;
     min-height: 232px;
 
     &:nth-child(2) {
