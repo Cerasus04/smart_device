@@ -1,25 +1,25 @@
 `use strict`;
 
-const btnCall = document.querySelector(`.header__btn`);
-const overlayCall = document.querySelector(`.overlay`);
-const popupCall = document.querySelector(`.modal`);
-const btnCloseCall = popupCall.querySelector(`.modal__close`);
-const submitBtn = document.querySelector(`.modal button[type="submit"]`);
-const feedbackBtn = document.querySelector(`.feedback button[type="submit"]`);
-const phoneInputs = document.querySelectorAll(`[data-type="tel"]`);
+const btnCall = document.querySelector(`.header__btn`),
+      overlayCall = document.querySelector(`.overlay`),
+      popupCall = document.querySelector(`.modal`),
+      btnCloseCall = popupCall.querySelector(`.modal__close`),
+      submitBtn = document.querySelector(`.modal button[type="submit"]`),
+      feedbackBtn = document.querySelector(`.feedback button[type="submit"]`),
+      phoneInputs = document.querySelectorAll(`[data-type="tel"]`),
 
-const phoneInputCall = document.querySelector(`#modal__tel`);
-const nameInputCall = document.querySelector(`#modal__name`);
-const checkCall = document.querySelector(`#modal__checked`);
-const checkboxLabel = document.querySelector(`.modal__checked-label`);
+      phoneInputCall = document.querySelector(`#modal__tel`),
+      nameInputCall = document.querySelector(`#modal__name`),
+      checkCall = document.querySelector(`#modal__checked`),
+      checkboxLabel = document.querySelector(`.modal__checked-label`),
 
-const phoneInput = document.querySelector(`#tel`);
-const nameInput = document.querySelector(`#name`);
-const checkbox = document.querySelector(`#checked`);
-const checkboxFeedback = document.querySelector(`.feedback__form-checkbox`);
+      phoneInput = document.querySelector(`#tel`),
+      nameInput = document.querySelector(`#name`),
+      checkbox = document.querySelector(`#checked`),
+      checkboxFeedback = document.querySelector(`.feedback__form-checkbox`),
 
-const form = document.querySelector(`.modal__form`);
-const inputText = document.querySelector(`.modal textarea`);
+      form = document.querySelector(`.modal__form`),
+      inputText = document.querySelector(`.modal textarea`);
 
 const onPopupEscPress = (evt) => {
   if (evt.key === `Escape`) {
@@ -65,7 +65,7 @@ let setCursorPosition = (pos, elem) => {
     }
 };
 
-function createMask(event) {
+function createMask(evt) {
   let matrix =`+7(___) ___ __ __`,
       i = 0,
       def = matrix.replace(/\D/g, ``),
@@ -79,7 +79,7 @@ function createMask(event) {
       return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? `` : a;
   });
 
-  if (event.type === `blur`) {
+  if (evt.type === `blur`) {
       if (this.value.length == 2) {
           this.value = ``;
       }
@@ -124,7 +124,6 @@ const validityForm = (checkbox, checkboxLabel, phone, name, button) => {
 
 feedbackBtn.addEventListener(`click`, validityForm(checkbox, checkboxFeedback, phoneInput, nameInput, feedbackBtn));
 submitBtn.addEventListener(`click`, validityForm(checkCall, checkboxLabel, phoneInputCall, nameInputCall, submitBtn));
-
 btnCall.addEventListener(`click`, openPopup);
 
 //локальное хранилище
@@ -167,8 +166,8 @@ form.addEventListener(`submit`, () => {
 const anchors = document.querySelectorAll(`a[href*="#"]`);
 
 for (let anchor of anchors) {
-  anchor.addEventListener(`click`, (e) =>{
-    e.preventDefault();
+  anchor.addEventListener(`click`, (evt) => {
+    evt.preventDefault();
 
     const blockID = anchor.getAttribute(`href`).substr(1);
 
@@ -181,8 +180,8 @@ for (let anchor of anchors) {
 
 // Аккордеон
 
-const list = document.querySelectorAll(`.sections`);
-const btns = document.querySelectorAll(`.sections__toggle`);
+const list = document.querySelectorAll(`.sections`),
+      btns = document.querySelectorAll(`.sections__toggle`);
 
 for (let k = 0; k < list.length; k++) {
   list[k].classList.remove(`sections--nojs`);
