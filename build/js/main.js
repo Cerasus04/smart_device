@@ -5,12 +5,18 @@ const overlayCall = document.querySelector(`.overlay`);
 const popupCall = document.querySelector(`.modal`);
 const btnCloseCall = popupCall.querySelector(`.modal__close`);
 const submitBtn = document.querySelector(`.modal button[type="submit"]`);
+const feedbackBtn = document.querySelector(`.feedback button[type="submit"]`);
 const phoneInputs = document.querySelectorAll('[data-type="tel"]');
 
 const phoneInputCall = document.querySelector(`#modal__tel`);
 const nameInputCall = document.querySelector(`#modal__name`);
 const checkboxCall = document.querySelector(`#modal__checked`);
 const checkboxLabel = document.querySelector(`.modal__checked-label`);
+
+const phoneInput = document.querySelector(`#tel`);
+const nameInput = document.querySelector(`#name`);
+const checkbox = document.querySelector(`#checked`);
+const checkboxFeedback = document.querySelector(`.feedback__form-checkbox`);
 
 const onPopupEscPress = (evt) => {
   if (evt.key === `Escape`) {
@@ -26,6 +32,7 @@ const openPopup = (evt) => {
   btnCloseCall.addEventListener(`click`, closePopup);
   document.addEventListener(`keydown`, onPopupEscPress);
   overlayCall.addEventListener(`click`, closePopup);
+  submitBtn.addEventListener(`click`, validityForm);
   nameInputCall.focus();
 };
 const closePopup = (evt) => {
@@ -34,7 +41,7 @@ const closePopup = (evt) => {
   overlayCall.classList.remove(`overlay--active`);
   btnCloseCall.removeEventListener(`click`, closePopup);
   document.removeEventListener(`keydown`, onPopupEscPress);
-  // submitBtn.removeEventListener(`click`, validityForm);
+  submitBtn.removeEventListener(`click`, validityForm);
   overlayCall.removeEventListener(`click`, closePopup);
 };
 
@@ -104,6 +111,29 @@ const validityForm = (evt) => {
   }
 };
 
+const validityFeedback = (evt) => {
+  if (!checkbox.checked || phoneInput.value.length !== 18 || !nameInput.value) {
+    if (!checkbox.checked) {
+      evt.preventDefault();
+      checkboxFeedback.classList.add(`modal--error`);
+    } else {
+      checkboxFeedback.classList.remove(`modal--error`);
+    }
+    if (phoneInput.value.length !== 18) {
+      evt.preventDefault();
+      phoneInput.classList.add(`modal--error`);
+    } else {
+      phoneInput.classList.remove(`modal--error`);
+    }
+    if (!nameInput.value) {
+      nameInput.classList.add(`modal--error`);
+    } else {
+      nameInput.classList.remove(`modal--error`);
+    }
+  }
+};
+
+feedbackBtn.addEventListener(`click`, validityFeedback);
 submitBtn.addEventListener(`click`, validityForm);
 btnCall.addEventListener(`click`, openPopup);
 
