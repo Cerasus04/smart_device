@@ -161,6 +161,7 @@
   @media (max-width: $tablet-width) {
     width: 290px;
     margin-left: 0;
+
     &--desktop {
       display: none;
     }
@@ -220,4 +221,3 @@
     width: 100%;
   }
 }
-

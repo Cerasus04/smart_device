@@ -17,7 +17,6 @@
     z-index: -1;
   }
 
-
   @media (max-width: $desktop-width) {
     padding-top: 12px;
     padding-bottom: 84px;
@@ -120,6 +119,7 @@
     display: none;
   }
 }
+
 .about__text-tablet {
   display: none;
 
@@ -127,6 +127,7 @@
     display: inline;
   }
 }
+
 .about__btn {
   font-family: $font-family;
   font-weight: 700;

@@ -8,6 +8,7 @@
 
   @media (min-width: $desktop-width-only) {
     background-position: 175px -60px, 1556px 35px;
+
     &::before,
     &::after {
       content: "";
@@ -337,6 +338,7 @@
     }
   }
 }
+
 .feedback__bottom {
   flex-direction: row-reverse;
 
@@ -344,7 +346,3 @@
     flex-direction: column-reverse;
   }
 }
-// .feedback__form--error {
-//   box-shadow: 0 2px 0 red;
-// }
-

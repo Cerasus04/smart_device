@@ -9,14 +9,11 @@
     background-repeat: no-repeat;
     width: 872px;
     height: 873px;
-
     top: 150px;
     left: 51.5%;
     transform: translateX(-50%);
     z-index: -1;
   }
-
-
 
   @media (max-width: $desktop-width) {
     padding-top: 57px;
@@ -54,6 +51,7 @@
     width: 336px;
     height: 324px;
   }
+
   &::before {
     transform: rotate(180deg);
     bottom: 45px;
@@ -116,7 +114,6 @@
   &:hover,
   &:focus {
     background-color: $sky;
-
 
     & svg {
       fill: $white;

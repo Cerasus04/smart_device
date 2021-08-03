@@ -18,6 +18,13 @@
       bottom: 65px;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    &::after {
+      bottom: 13%;
+    }
+  }
+
   @media (max-width: $mobile-width) {
     &::after {
       bottom: 105px;
@@ -83,9 +90,6 @@
   }
 }
 .footer__header {
-  // margin-bottom: 41px;
-  // width: 26%;
-
   @media (max-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
@@ -123,6 +127,7 @@
     }
   }
 }
+
 .footer__logo {
   width: 216px;
   min-height: 52px;
@@ -172,8 +177,6 @@
   }
 }
 .footer__address {
-//   width: 24%;
-
   @media (max-width: $tablet-width) {
     position: relative;
     &::after {
@@ -279,4 +282,3 @@
     justify-content: space-around;
   }
 }
-

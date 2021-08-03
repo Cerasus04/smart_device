@@ -49,7 +49,7 @@
       <div class="container promo__wrapper">
         <h2>Печатные платы</h2>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="promo__btn link" href="#">
+        <a class="promo__btn link" href="#feedback">
           <span class="promo__btn-call promo__btn-call--desktop">Получить бесплатную консультацию</span>
           <span class="promo__btn-call promo__btn-call--mobile">Бесплатная консультация</span>
         </a>
@@ -60,10 +60,10 @@
             <img src="img/card-desktop@1x.png" srcset="img/card-desktop@2x.png 2x" alt="Плата" width="705" height="515">
           </picture>
         </div>
-        <a class="promo__link link" href="#">Скролл вниз</a>
+        <a class="promo__link link" href="#advantages">Скролл вниз</a>
       </div>
     </section>
-    <section class="main__advsntages advantages">
+    <section class="main__advsntages advantages" id="advantages">
       <div class="container">
         <div class="advantages__wrapper">
           <div class="advantages__item">
@@ -177,7 +177,7 @@
         </ul>
       </div>
     </section>
-    <section class="main__feedback feedback">
+    <section class="main__feedback feedback" id="feedback">
       <h2 class="visually-hidden">
         Форма для получения бесплатной консультации
       </h2>
@@ -232,12 +232,10 @@
             </a>
           </div>
         </section>
-        <section class="footer__sections sections sections--active">
+        <section class="footer__sections sections sections--nojs">
           <h2 class="visually-hidden">Навигация по разделам</h2>
-          <div class="sections__menu">
-            <button class="sections__toggle" type="button" aria-label="навигация для открытия выпадающего меню">Разделы сайта
-            </button>
-          </div>
+          <button class="sections__toggle" type="button" aria-label="навигация для открытия выпадающего меню">Разделы сайта
+          </button>
           <div class="sections__site-block">
             <ul class="sections__site-list">
               <li>
@@ -264,12 +262,10 @@
             </ul>
           </div>
         </section>
-        <section class="footer__address sections sections--active">
+        <section class="footer__address sections sections--nojs">
           <h2 class="visually-hidden">Наши контакты</h2>
-          <div class="sections__menu">
-            <button class="sections__toggle" type="button" aria-label="навигация для открытия выпадающего меню">Наш офис
-            </button>
-          </div>
+          <button class="sections__toggle" type="button" aria-label="навигация для открытия выпадающего меню">Наш офис
+          </button>
           <div class="sections__address-block">
             <p>г. Мытищи, Олимпийский проспект, д.10</p>
             <a class="link" href="tel:+74955894050" aria-label="телефон компании">
@@ -300,18 +296,18 @@
 
   <div class="overlay"></div>
   <div class="modal">
-    <form action="#" class="modal__form">
+    <form action="https://echo.htmlacademy.ru" class="modal__form">
       <fieldset>
         <legend>Закажите звонок</legend>
         <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
         <label class="visually-hidden" for="modal__name">Введите ваше имя</label>
-        <input type="text" data-type="name" id="modal__name" name="name" placeholder="Имя" required="" pattern="[A-Za-zА-Яа-яЁё\s]+$">
+        <input type="text" id="modal__name" name="name" placeholder="Имя" required="" pattern="[A-Za-zА-Яа-яЁё\s]+$">
         <label class="visually-hidden" for="modal__tel">Введите ваш телефон</label>
         <input type="tel" data-type="tel" id="modal__tel" name="phone" placeholder="Телефон" required="">
         <textarea placeholder="Ваш вопрос" name="question"></textarea>
         <button type="submit">Отправить</button>
-        <input class="visually-hidden" name="consent" type="checkbox" data-type="checkbox" id="modal__checked">
-        <label class="modal__checked-label" data-type="checkbox-label" for="modal__checked">Я согласен на обработку персональных данных</label>
+        <input class="visually-hidden" name="consent" type="checkbox" id="modal__checked">
+        <label class="modal__checked-label" for="modal__checked">Я согласен на обработку персональных данных</label>
         <button class="modal__close" type="button">
           <svg width="27" height="26" viewBox="0 0 27 26">
             <use xlink:href="img/sprite.svg#icon-modal-close"></use>
