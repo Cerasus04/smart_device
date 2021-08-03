@@ -25,9 +25,13 @@
   }
 }
 .footer__wrapper {
-  padding: 62px 0 0 0;
-  max-width: 1412px;
+  padding: 62px 25px 0;
+  max-width: 1200px;
   margin: 0 auto;
+
+  @media (min-width: $desktop-width-only) {
+    max-width: 1412px;
+  }
 
   @media (max-width: $desktop-width) {
     padding: 19px 0 0 0;
@@ -42,13 +46,15 @@
   position: relative;
   display: grid;
   grid-template-columns: 26% 43% 26%;
-  gap: 52px;
+
+  @media (min-width: $desktop-width-only) {
+    gap: 52px;
+  }
 
   @media (max-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
     padding: 0 25px;
-    gap: 0;
 
     &::after {
       content: "";

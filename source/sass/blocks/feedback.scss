@@ -4,41 +4,37 @@
   padding: 91px 0 112px;
   background-image: url("../img/icon/rectangle-dt.svg");
   background-repeat: no-repeat;
-  background-position: 175px -60px, 1556px 35px;
+  background-position: -45px -60px, 1556px 35px;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
+  @media (min-width: $desktop-width-only) {
+    background-position: 175px -60px, 1556px 35px;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      background-repeat: no-repeat;
+    }
 
-    // transform: rotate(180deg);
-  }
+    &::before {
+      width: 335px;
+      height: 335px;
+      background-image: url("../img/icon/triangle-fb1.svg");
+      right: -56px;
+      top: 43px;
+    }
 
-  &::before {
-    width: 335px;
-    height: 335px;
-    background-image: url("../img/icon/triangle-fb1.svg");
-    right: -56px;
-    top: 43px;
-  }
-
-  &::after {
-    width: 373px;
-    height: 373px;
-    background-image: url("../img/icon/triangle-fb2.svg");
-    right: -28px;
-    bottom: 13px;
+    &::after {
+      width: 373px;
+      height: 373px;
+      background-image: url("../img/icon/triangle-fb2.svg");
+      right: -28px;
+      bottom: 13px;
+    }
   }
 
   @media (max-width: $desktop-width) {
     padding: 76px 0 104px;
     background-image: none;
-
-    &::before,
-    &::after {
-      display: none;
-    }
   }
 
   @media (max-width: $tablet-width) {
@@ -348,7 +344,7 @@
     flex-direction: column-reverse;
   }
 }
-.feedback__form--error {
-  box-shadow: 0 2px 0 red;
-}
+// .feedback__form--error {
+//   box-shadow: 0 2px 0 red;
+// }
 

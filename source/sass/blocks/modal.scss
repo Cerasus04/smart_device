@@ -163,29 +163,29 @@
   }
 }
 
-.modal__checked--error {
-  animation: shake 0.6s;
+.modal--error {
+  box-shadow: 2px red;
 }
 
-@keyframes shake {
-  0%,
-  100% {
-    transform: translate(0, -50%);
-  }
+// @keyframes shake {
+//   0%,
+//   100% {
+//     transform: translate(0, -50%);
+//   }
 
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translate(-10px, -50%);
-  }
+//   10%,
+//   30%,
+//   50%,
+//   70%,
+//   90% {
+//     transform: translate(-10px, -50%);
+//   }
 
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translate(10px, -50%);
-  }
-}
+//   20%,
+//   40%,
+//   60%,
+//   80% {
+//     transform: translate(10px, -50%);
+//   }
+// }
 
