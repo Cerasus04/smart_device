@@ -2,8 +2,8 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   display: none;
+  transform: translate(-50%, -50%);
   z-index: 20;
 
   &--active {
@@ -18,9 +18,9 @@
 .modal__form {
   position: relative;
   width: 490px;
+  padding: 30px 39px;
   min-height: 605px;
   background-color: $sky;
-  padding: 30px 39px;
 
   & fieldset {
     margin: 0;
@@ -37,22 +37,22 @@
   }
 
   & p {
+    width: 90%;
+    margin: 12px 0 31px;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
     color: $white;
-    margin: 12px 0 31px;
-    width: 90%;
   }
 
   & input:not([type="checkbox"]) {
     width: 100%;
     min-height: 51px;
+    padding: 14px 24px;
+    margin-bottom: 32px;
     background-color: rgba($white, 0.2);
     border: none;
     color: $white;
-    padding: 14px 24px;
-    margin-bottom: 32px;
 
     &::placeholder {
       color: $white;
@@ -61,13 +61,14 @@
 
   & textarea {
     width: 100%;
+    min-height: 103px;
+    margin-bottom: 26px;
+    padding: 14px 24px;
     background-color: rgba($white, 0.2);
     border: none;
-    padding: 14px 24px;
     resize: none;
-    min-height: 103px;
     color: $white;
-    margin-bottom: 26px;
+
 
     &::placeholder {
       color: $white;
@@ -77,10 +78,7 @@
   & button[type="submit"] {
     width: 100%;
     min-height: 46px;
-    border: 1px solid $white;
-    background-color: transparent;
-    color: $white;
-    border-radius: 5px;
+    margin-bottom: 35px;
     text-transform: uppercase;
     font-family: $font-family;
     font-weight: 700;
@@ -88,7 +86,10 @@
     line-height: 16px;
     text-align: center;
     letter-spacing: 0.05em;
-    margin-bottom: 35px;
+    background-color: transparent;
+    border: 1px solid $white;
+    border-radius: 5px;
+    color: $white;
     cursor: pointer;
 
     &:hover,
@@ -105,14 +106,14 @@
 
   & label[for="modal__checked"] {
     position: relative;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    color: rgba($white, 0.8);
     display: block;
     width: 100%;
     padding: 2px;
     padding-left: 48px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: rgba($white, 0.8);
     cursor: pointer;
 
     &::before {
@@ -146,9 +147,9 @@
   right: 0;
   width: 57px;
   height: 57px;
+  padding: 0;
   border: none;
   background-color: transparent;
-  padding: 0;
   cursor: pointer;
   transition: all 0.2s ease;
 

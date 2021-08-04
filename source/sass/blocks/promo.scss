@@ -2,15 +2,11 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  max-width: 1566px;
+  max-width: 1556px;
   min-height: 878px;
   margin: 0 auto;
   padding-top: 272px;
   z-index: 10px;
-
-  @media (min-width: $desktop) {
-    width: calc(100% - 19%);
-  }
 
   @media (max-width: $desktop-width) {
     min-height: 683px;
@@ -24,14 +20,15 @@
   }
 
   &::after {
-    position: absolute;
     content: "";
-    background-image: url("../img/icon/rectangle-dt.svg");
-    background-repeat: no-repeat;
+    position: absolute;
     top: 116px;
     right: 35px;
     width: 671px;
     height: 641px;
+    background-image: url("../img/icon/rectangle-dt.svg");
+    background-repeat: no-repeat;
+
 
     @media (max-width: $desktop-width) {
       background-image: url("../img/icon/rectangle-tablet.svg");
@@ -65,18 +62,16 @@
     }
 
     @media (max-width: $tablet-width) {
-      font-size: 40px;
       margin: 0 0 22px;
+      font-size: 40px;
     }
   }
 
   & p {
     position: relative;
     max-width: 750px;
-
     margin: 0 0 45px;
     padding-left: 98px;
-
     font-size: 22px;
     line-height: 34px;
     color: $white;
@@ -94,9 +89,9 @@
     }
 
     @media (max-width: $tablet-width) {
-      font-size: 16px;
       width: 100%;
       margin-bottom: 44px;
+      font-size: 16px;
       line-height: 25px;
     }
 
@@ -194,10 +189,10 @@
   z-index: -1;
 
   @media (max-width: $desktop-width) {
-    width: 60%;
     bottom: unset;
     top: 113px;
     right: -205px;
+    width: 60%;
 
     & img {
       width: 465px;
@@ -207,9 +202,9 @@
 
   @media (max-width: $tablet-width) {
     height: 305px;
-    object-fit: cover;
     top: 92px;
     right: -27px;
+    object-fit: cover;
 
     & img {
       width: 301px;

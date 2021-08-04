@@ -5,12 +5,12 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/icon/triangle-big-dt.svg");
-    background-repeat: no-repeat;
-    width: 872px;
-    height: 873px;
     top: 150px;
     left: 51.5%;
+    width: 872px;
+    height: 873px;
+    background-image: url("../img/icon/triangle-big-dt.svg");
+    background-repeat: no-repeat;
     transform: translateX(-50%);
     z-index: -1;
   }
@@ -46,16 +46,16 @@
   &::after {
     content: "";
     position: absolute;
-    background-repeat: no-repeat;
-    background-image: url("../img/icon/triangle-mini-dt.svg");
     width: 336px;
     height: 324px;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon/triangle-mini-dt.svg");
   }
 
   &::before {
-    transform: rotate(180deg);
     bottom: 45px;
     right: 30px;
+    transform: rotate(180deg);
     z-index: -1;
   }
 
@@ -85,11 +85,11 @@
 .advantages__item {
   width: 49%;
   min-height: 299px;
+  margin-bottom: 30px;
+  padding: 40px 44px 40px 43px;
+  background-color: $white;
   border: 1px solid $two-white;
   border-left: 3px solid $sky;
-  padding: 40px 44px 40px 43px;
-  margin-bottom: 30px;
-  background-color: $white;
   cursor: pointer;
 
   & svg {
@@ -97,12 +97,12 @@
   }
 
   & h2 {
+    margin: 16px 0;
     font-family: $font-family;
     font-weight: 400;
     font-size: 24px;
     line-height: 34px;
     color: $sky;
-    margin: 16px 0;
   }
 
   & p {
@@ -131,8 +131,8 @@
   @media (max-width: $desktop-width) {
     width: 48%;
     min-height: min-content;
-    padding: 21px 24px 24px 23px;
     margin-bottom: 27px;
+    padding: 21px 24px 24px 23px;
 
     & h2 {
       margin: 6px 0;

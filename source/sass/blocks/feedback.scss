@@ -1,36 +1,41 @@
 .feedback {
   position: relative;
-  background-color: $sky;
   padding: 91px 0 112px;
+  background-color: $sky;
   background-image: url("../img/icon/rectangle-dt.svg");
   background-repeat: no-repeat;
-  background-position: -45px -60px, 1556px 35px;
+  background-position: 175px -60px, 1556px 35px;
 
-  @media (min-width: $desktop-width-only) {
-    background-position: 175px -60px, 1556px 35px;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+  }
 
+  &::before {
+    width: 335px;
+    height: 335px;
+    right: -56px;
+    top: 43px;
+    background-image: url("../img/icon/triangle-fb1.svg");
+  }
+
+  &::after {
+    width: 373px;
+    height: 373px;
+    right: -28px;
+    bottom: 13px;
+    background-image: url("../img/icon/triangle-fb2.svg");
+  }
+
+  @media (max-width: $desktop) {
     &::before,
     &::after {
-      content: "";
-      position: absolute;
-      background-repeat: no-repeat;
+      content: none;
     }
 
-    &::before {
-      width: 335px;
-      height: 335px;
-      background-image: url("../img/icon/triangle-fb1.svg");
-      right: -56px;
-      top: 43px;
-    }
-
-    &::after {
-      width: 373px;
-      height: 373px;
-      background-image: url("../img/icon/triangle-fb2.svg");
-      right: -28px;
-      bottom: 13px;
-    }
+    background-position: -45px -60px, 1556px 35px;
   }
 
   @media (max-width: $desktop-width) {
@@ -49,8 +54,8 @@
   flex-wrap: wrap;
   justify-content: flex-end;
   max-width: 1225px;
-  padding: 0 28px;
   margin: 0 auto;
+  padding: 0 28px;
 
   @media (max-width: $desktop-width) {
     justify-content: center;
@@ -61,24 +66,24 @@
 .feedback__form {
   position: relative;
   width: 570px;
-  min-height: 461px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
   justify-content: space-between;
+  min-height: 461px;
   z-index: 1;
 
   &::after {
     content: "";
-    background-image: url("../img/paper-airplane@1x.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: block;
-    width: 511px;
-    height: 288px;
     position: absolute;
     top: 70px;
     left: -624px;
+    display: block;
+    width: 511px;
+    height: 288px;
+    background-image: url("../img/paper-airplane@1x.png");
+    background-repeat: no-repeat;
+    background-size: contain;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/paper-airplane@2x.png");
@@ -90,21 +95,21 @@
   }
 
   & fieldset {
+    width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
     border: none;
   }
 
   & legend {
+    width: 100%;
+    margin: 0;
+    margin-left: -4px;
     font-family: $font-family;
     font-weight: 400;
     font-size: 36px;
     line-height: 50px;
     color: $white;
-    width: 100%;
-    margin: 0;
-    margin-left: -4px;
 
     @media (max-width: $desktop-width) {
       font-size: 32px;
@@ -147,14 +152,14 @@
 
   & textarea {
     width: 100%;
-    padding: 13px 16px;
     margin: 40px 0 43px;
+    padding: 13px 16px;
     min-height: 154px;
     font-size: 16px;
     background-color: rgba($white, 0.1);
     border: none;
-    color: $white;
     border-radius: 0;
+    color: $white;
     resize: none;
 
     &:hover,
@@ -199,8 +204,7 @@
   & label[for="checked"] {
     position: relative;
     width: 270px;
-    padding-left: 40px;
-    padding-top: 8px;
+    padding: 8px 0 0 40px;
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -295,19 +299,19 @@
 
   @media (max-width: $tablet-width) {
     width: 100%;
-    padding: 0 15px;
     margin-left: 0;
+    padding: 0 15px;
 
     & h2 {
+      margin: 0;
       font-size: 28px;
       line-height: 39px;
-      margin: 0;
     }
 
     & p {
+      margin: 13px 0 26px;
       font-size: 16px;
       line-height: 22px;
-      margin: 13px 0 26px;
     }
 
     & input:not([type="checkbox"]) {
@@ -316,8 +320,7 @@
     }
 
     & textarea {
-      margin-top: 0;
-      margin-bottom: 27px;
+      margin: 0 0 27px;
       width: 100%;
       min-height: 104px;
     }

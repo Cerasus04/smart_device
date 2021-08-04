@@ -32,12 +32,12 @@
   }
 }
 .footer__wrapper {
-  padding: 62px 25px 0;
-  max-width: 1200px;
+  max-width: 1466px;
   margin: 0 auto;
+  padding: 62px 25px 0;
 
-  @media (min-width: $desktop-width-only) {
-    max-width: 1412px;
+  @media (max-width: $desktop) {
+    max-width: 1200px;
   }
 
   @media (max-width: $desktop-width) {
@@ -53,9 +53,10 @@
   position: relative;
   display: grid;
   grid-template-columns: 26% 43% 26%;
+  gap: 52px;
 
-  @media (min-width: $desktop-width-only) {
-    gap: 52px;
+  @media (max-width: $desktop) {
+   gap: 0;
   }
 
   @media (max-width: $desktop-width) {
@@ -107,35 +108,31 @@
 
   & span {
     display: none;
+    margin: 4px -10px 0 0;
     font-weight: 400;
     font-size: 13px;
     line-height: 24px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: rgba($dark-gray, 0.5);
-    margin-top: 4px;
-    margin-right: -10px;
 
     @media (max-width: $desktop-width) {
       display: block;
     }
 
     @media (max-width: $tablet-width) {
-      margin-top: 27px;
-      margin-bottom: 31px;
-      margin-right: 0;
+      margin: 27px 0 31px;
     }
   }
 }
 
 .footer__logo {
+  position: relative;
+  display: block;
   width: 216px;
   min-height: 52px;
-  display: block;
-  padding-left: 68px;
-  padding-top: 6px;
-  position: relative;
   margin-bottom: 54px;
+  padding: 6px 0 0 68px;
 
   & svg {
     position: absolute;
@@ -202,12 +199,12 @@
 }
 
 .footer__bottom {
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin: 0 auto;
   max-width: 1413px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  position: relative;
 
   & p,
   & a {
@@ -251,9 +248,7 @@
   width: 59%;
 
   & a {
-    margin-left: 20px;
-    margin-top: 13px;
-    margin-bottom: 13px;
+    margin: 13px 0 13px 20px;
 
     &:hover,
     &:focus {

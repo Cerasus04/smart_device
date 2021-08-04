@@ -53,12 +53,13 @@
   @include ul-reset;
 
   display: flex;
-  justify-content: justify-content;
   flex-wrap: wrap;
   gap: 22px;
+  margin-bottom: 46px;
 
   @media (max-width: $desktop-width) {
     justify-content: center;
+    margin: 0;
   }
 
   @media (max-width: $tablet-width) {
@@ -68,7 +69,6 @@
 }
 
 .service__item {
-  margin-bottom: 46px;
   width: 31.3%;
 
   @media (max-width: $desktop-width) {

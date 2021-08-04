@@ -6,13 +6,13 @@
   min-height: 878px;
   padding: 33px;
   background-color: $dark-gray;
-  background-image: url("../img/desktop_main-bg@1x.png");
+  background-image: url("../img/desktop-main-bg@1x.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/desktop_main-bg@2x.png");
+    background-image: url("../img/desktop-main-bg@2x.png");
   }
 
   @media (max-width: $desktop-width) {
@@ -42,12 +42,11 @@
 }
 
 .header__logo {
+  position: relative;
   width: 14%;
   min-height: 52px;
   margin-left: 12px;
-  padding-left: 69px;
-  padding-top: 6px;
-  position: relative;
+  padding: 6px 0 0 69px;
   z-index: 10;
 
   & svg {

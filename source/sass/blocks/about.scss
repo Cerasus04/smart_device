@@ -6,13 +6,12 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/icon/triangle-big-dt.svg");
-    background-repeat: no-repeat;
-    width: 872px;
-    height: 873px;
-
     top: -330px;
     left: -300px;
+    width: 872px;
+    height: 873px;
+    background-image: url("../img/icon/triangle-big-dt.svg");
+    background-repeat: no-repeat;
     transform: rotate(180deg);
     z-index: -1;
   }
@@ -42,23 +41,23 @@
 
   &::after {
     content: "";
-    background-image: url("../img/2005@1x.png");
-    background-repeat: no-repeat;
-    width: 180px;
-    height: 320px;
-    display: block;
     position: absolute;
     top: 5px;
     left: 105px;
+    display: block;
+    width: 180px;
+    height: 320px;
+    background-image: url("../img/2005@1x.png");
+    background-repeat: no-repeat;
   }
 
   & h2 {
+    margin-bottom: 22px;
     font-family: $font-family;
     font-weight: 400;
     font-size: 36px;
     line-height: 51px;
     color: $dull-gray;
-    margin-bottom: 22px;
   }
 
   & p {
@@ -77,9 +76,9 @@
     margin-right: 28px;
 
     & h2 {
+      margin-bottom: 27px;
       font-size: 32px;
       line-height: 45px;
-      margin-bottom: 27px;
     }
 
     &::after {
@@ -129,6 +128,10 @@
 }
 
 .about__btn {
+  display: block;
+  margin-top: 37px;
+  padding: 13px 49px;
+  width: min-content;
   font-family: $font-family;
   font-weight: 700;
   font-size: 14px;
@@ -139,10 +142,7 @@
   color: $sky;
   border: 1px solid $sky;
   border-radius: 5px;
-  padding: 13px 49px;
-  width: min-content;
-  margin-top: 37px;
-  display: block;
+
 
   &:hover,
   &:focus {

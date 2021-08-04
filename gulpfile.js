@@ -17,18 +17,21 @@ const include = require('posthtml-include');
 const del = require('del');
 const path = require('path');
 const ghPages = require('gh-pages');
+const concat = require('gulp-concat');
 
-gulp.task('css', function () {
-  return gulp.src('source/sass/style.scss')
-    .pipe(plumber())
-    .pipe(sourcemap.init())
-    .pipe(sass())
-    .pipe(postcss([ autoprefixer() ]))
-    .pipe(csso())
-    .pipe(rename('style.min.css'))
-    .pipe(sourcemap.write('.'))
-    .pipe(gulp.dest('build/css'))
-    .pipe(server.stream());
+gulp.task(`css`, function () {
+  return gulp.src(`source/sass/style.scss`)
+      .pipe(plumber())
+      .pipe(sourcemap.init())
+      .pipe(sass())
+      .pipe(postcss([autoprefixer()]))
+      .pipe(rename(`style.css`))
+      .pipe(gulp.dest(`build/css`))
+      .pipe(csso())
+      .pipe(rename(`style.min.css`))
+      .pipe(sourcemap.write(`.`))
+      .pipe(gulp.dest(`build/css`))
+      .pipe(server.stream());
 });
 
 gulp.task('server', function () {
@@ -83,11 +86,16 @@ gulp.task('html', function () {
     .pipe(gulp.dest('build'));
 });
 
+gulp.task('scripts', function() {
+  return gulp.src('source/js/*.js')
+    .pipe(concat('main.js'))
+    .pipe(gulp.dest('build/js'));
+});
+
 gulp.task('copy', function () {
   return gulp.src([
     'source/fonts/**/*.{woff,woff2}',
     'source/img/**',
-    'source/js/**',
     'source//*.ico'
     ], {
       base: 'source'
@@ -103,5 +111,5 @@ gulp.task('deploy', function (cb) {
   ghPages.publish(path.join(process.cwd(), './build'), cb);
 });
 
-gulp.task('build', gulp.series('clean', 'copy', 'css', 'sprite', 'webp', 'html'));
+gulp.task('build', gulp.series('clean', 'copy', 'scripts', 'css', 'sprite', 'webp', 'html'));
 gulp.task('start', gulp.series('build', 'server'));

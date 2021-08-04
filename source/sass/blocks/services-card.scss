@@ -3,10 +3,10 @@
 
   &::before,
   &::after {
+    content: "";
     position: absolute;
     bottom: 34px;
     right: 26px;
-    content: "";
     width: 6px;
     height: 1px;
     background-color: $white;
@@ -65,14 +65,15 @@
 }
 
 .service-card__link {
+  min-height: 620px;
+  transition: all 0.2s ease;
 
-  &:hover {
-    img {
-      opacity: 0.5;
-    }
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
 
     &::after {
-      box-shadow: 0 0 2px 4px $white;
+      box-shadow: 0 0 2px 4px $dl-blue;
     }
   }
 
