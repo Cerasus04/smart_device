@@ -65,6 +65,7 @@
 }
 
 .service-card__link {
+  display: block;
   min-height: 620px;
   transition: all 0.2s ease;
 
@@ -72,9 +73,13 @@
   &:focus {
     transform: scale(1.05);
 
-    &::after {
-      box-shadow: 0 0 2px 4px $dl-blue;
+    & img {
+      opacity: 2;
     }
+
+    // &::after {
+    //   bottom: 0;
+    // }
   }
 
   &::after {

@@ -65,8 +65,11 @@
     z-index: -1;
   }
 
+  @media (max-width: $desktop) {
+    margin: 0 25px;
+  }
+
   @media (max-width: $desktop-width) {
-    max-width: 723px;
 
     &::before {
       display: none;

@@ -1,19 +1,19 @@
 'use strict';
 {
-  const phoneInputCall = document.querySelector(`#modal__tel`),
-        nameInputCall = document.querySelector(`#modal__name`),
-        inputText = document.querySelector(`.modal textarea`),
-        form = document.querySelector(`.modal__form`);
+  const phoneInputCall = document.querySelector('#modal__tel'),
+        nameInputCall = document.querySelector('#modal__name'),
+        inputText = document.querySelector('.modal textarea'),
+        form = document.querySelector('.modal__form');
 
-  let storageName = ``,
-    storageTel = ``,
-    storageText = ``,
+  let storageName = '',
+    storageTel = '',
+    storageText = '',
     isStorageSupport = true;
 
   try {
-    storageName = localStorage.getItem(`name`);
-    storageTel = localStorage.getItem(`tel`);
-    storageText = localStorage.getItem(`text`);
+    storageName = localStorage.getItem('name');
+    storageTel = localStorage.getItem('tel');
+    storageText = localStorage.getItem('text');
   } catch (err) {
     isStorageSupport = false;
   }
@@ -30,11 +30,11 @@
     inputText.value = storageText;
   }
 
-  form.addEventListener(`submit`, () => {
+  form.addEventListener('submit', () => {
     if (isStorageSupport) {
-      localStorage.setItem(`name`, nameInputCall.value);
-      localStorage.setItem(`tel`, phoneInputCall.value);
-      localStorage.setItem(`text`, inputText.value);
+      localStorage.setItem('name', nameInputCall.value);
+      localStorage.setItem('tel', phoneInputCall.value);
+      localStorage.setItem('text', inputText.value);
     }
   });
 }
