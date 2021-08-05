@@ -23,9 +23,6 @@
   }
 })();
 
-
-
-
 'use strict';
 
 (function () {
