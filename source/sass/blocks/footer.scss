@@ -146,27 +146,34 @@
 }
 
 .footer__social-list {
-  & svg {
-    fill: $icon-gray;
+  display: flex;
 
-    &:hover,
-    &:focus {
-      fill: rgba($black, 0.8);
-    }
+  & a {
+    display: block;
+    width: 27px;
 
-    &:active {
-      fill: rgba($black, 0.4);
+    & svg {
+      fill: $icon-gray;
+
+      &:hover,
+      &:focus {
+        fill: $dl-blue;
+      }
+
+      &:active {
+        fill: rgba($black, 0.4);
+      }
     }
   }
 
   & a:not(:last-child) {
-    margin-right: 6px;
+    margin-right: 16px;
   }
 }
 
 .footer__sections {
   @media (max-width: $desktop-width) {
-    margin-right: 146px;
+    margin-right: 132px;
   }
 
   @media (max-width: $tablet-width) {
@@ -218,7 +225,7 @@
   }
 
   @media (max-width: $desktop-width) {
-    margin-top: 38px;
+    margin-top: 20px;
     padding: 0 25px;
   }
 
@@ -229,6 +236,7 @@
 
 .footer__rights-wrap1 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 33.7%;
 
@@ -244,6 +252,7 @@
 
 .footer__rights-wrap2 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 59%;
 

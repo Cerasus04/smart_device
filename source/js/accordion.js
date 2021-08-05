@@ -22,6 +22,3 @@
     btns[i].addEventListener('click', toggleItem, false);
   }
 })();
-
-
-

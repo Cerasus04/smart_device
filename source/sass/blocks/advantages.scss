@@ -82,6 +82,7 @@
 
   @media (max-width: $mobile-width) {
     max-width: $mobile;
+    margin: 0 auto;
   }
 }
 
@@ -93,7 +94,6 @@
   background-color: $white;
   border: 1px solid $two-white;
   border-left: 3px solid $sky;
-  cursor: pointer;
 
   & svg {
     fill: $sky;
@@ -135,7 +135,7 @@
     width: 48%;
     min-height: min-content;
     margin-bottom: 27px;
-    padding: 21px 24px 24px 23px;
+    padding: 21px 21px 24px 23px;
 
     & h2 {
       margin: 6px 0;

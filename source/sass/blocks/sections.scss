@@ -2,7 +2,6 @@
   @media (max-width: $tablet-width) {
     position: relative;
     width: 100%;
-    padding: 0 15px;
 
     &::after {
       content: "";
@@ -72,6 +71,7 @@
   @media (max-width: $tablet-width) {
     width: 100%;
     position: relative;
+    padding: 0 15px;
 
     &::after,
     &::before {
@@ -85,13 +85,13 @@
     &::after {
       width: 16px;
       height: 1px;
-      right: -5px;
+      right: 12px;
     }
 
     &::before {
       width: 1px;
       height: 16px;
-      right: 9px;
+      right: 27px;
     }
   }
 }
@@ -102,7 +102,7 @@
   @media (max-width: $tablet-width) {
     display: none;
     margin: 0;
-    padding-right: 20px;
+    padding: 0 20px 0 15px;
   }
 
   & p {
@@ -117,6 +117,7 @@
 
 .sections__site-list {
   @include ul-reset;
+  padding: 0 15px 15px 0;
   min-height: 156px;
   column-count: 2;
   column-gap: 80px;
@@ -154,7 +155,7 @@
   @media (max-width: $tablet-width) {
     display: none;
     width: 91%;
-    padding-top: 9px;
+    padding: 9px 20px 0 15px;
     line-height: 22px;
   }
 }

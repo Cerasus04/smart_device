@@ -89,6 +89,12 @@
       background-image: url("../img/paper-airplane@2x.png");
     }
 
+    @media (max-width: $desktop) {
+      width: 400px;
+      top: 87px;
+      left: -421px;
+    }
+
     @media (max-width: $desktop-width) {
       content: none;
     }

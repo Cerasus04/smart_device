@@ -1,6 +1,7 @@
 'use strict';
 (function () {
-  const btnCall = document.querySelector('.header__btn'),
+  const page = document.querySelector('.page'),
+      btnCall = document.querySelector('.header__btn'),
       overlayCall = document.querySelector('.overlay'),
       popupCall = document.querySelector('.modal'),
       btnCloseCall = popupCall.querySelector('.modal__close'),
@@ -26,12 +27,14 @@
 
   const openPopup = (evt) => {
     evt.preventDefault();
+    page.classList.add('page--js');
     popupCall.classList.add('modal--active');
     overlayCall.classList.add('overlay--active');
     btnCloseCall.addEventListener('click', closePopup);
     document.addEventListener('keydown', onPopupEscPress);
     overlayCall.addEventListener('click', closePopup);
     nameInputCall.focus();
+    popupCall.focus();
   };
 
   const closePopup = (evt) => {
@@ -74,4 +77,3 @@
   submitBtn.addEventListener('click', validityForm(checkCall, checkboxLabel, phoneInputCall, nameInputCall, submitBtn));
   btnCall.addEventListener('click', openPopup);
 })();
-
