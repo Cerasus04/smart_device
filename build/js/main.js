@@ -1,5 +1,5 @@
 'use strict';
-{
+(function () {
   const list = document.querySelectorAll('.sections'),
   btns = document.querySelectorAll('.sections__toggle');
 
@@ -21,10 +21,14 @@
   for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', toggleItem, false);
   }
-}
+})();
+
+
+
 
 'use strict';
-{
+
+(function () {
   const anchors = document.querySelectorAll('a[href*="#"]');
 
   for (let anchor of anchors) {
@@ -39,10 +43,10 @@
       });
     });
   }
-}
+})();
 
 'use strict';
-{
+(function () {
   const btnCall = document.querySelector('.header__btn'),
       overlayCall = document.querySelector('.overlay'),
       popupCall = document.querySelector('.modal'),
@@ -116,10 +120,12 @@
   feedbackBtn.addEventListener('click', validityForm(checkbox, checkboxFeedback, phoneInput, nameInput, feedbackBtn));
   submitBtn.addEventListener('click', validityForm(checkCall, checkboxLabel, phoneInputCall, nameInputCall, submitBtn));
   btnCall.addEventListener('click', openPopup);
-}
+})();
+
 
 'use strict';
-{
+
+(function () {
   const phoneInputCall = document.querySelector('#modal__tel'),
         nameInputCall = document.querySelector('#modal__name'),
         inputText = document.querySelector('.modal textarea'),
@@ -157,10 +163,11 @@
       localStorage.setItem('text', inputText.value);
     }
   });
-}
+})();
 
 'use strict';
-{
+
+(function () {
   const phoneInputs = document.querySelectorAll('[data-type="tel"]');
 
   let setCursorPosition = (pos, elem) => {
@@ -206,4 +213,5 @@
       input.addEventListener('focus', createMask);
       input.addEventListener('blur', createMask);
   });
-}
+})();
+

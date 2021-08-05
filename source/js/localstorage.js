@@ -1,5 +1,6 @@
 'use strict';
-{
+
+(function () {
   const phoneInputCall = document.querySelector('#modal__tel'),
         nameInputCall = document.querySelector('#modal__name'),
         inputText = document.querySelector('.modal textarea'),
@@ -37,4 +38,4 @@
       localStorage.setItem('text', inputText.value);
     }
   });
-}
+})();

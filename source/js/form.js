@@ -1,5 +1,5 @@
 'use strict';
-{
+(function () {
   const btnCall = document.querySelector('.header__btn'),
       overlayCall = document.querySelector('.overlay'),
       popupCall = document.querySelector('.modal'),
@@ -73,4 +73,5 @@
   feedbackBtn.addEventListener('click', validityForm(checkbox, checkboxFeedback, phoneInput, nameInput, feedbackBtn));
   submitBtn.addEventListener('click', validityForm(checkCall, checkboxLabel, phoneInputCall, nameInputCall, submitBtn));
   btnCall.addEventListener('click', openPopup);
-}
+})();
+

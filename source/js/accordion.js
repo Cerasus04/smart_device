@@ -1,5 +1,5 @@
 'use strict';
-{
+(function () {
   const list = document.querySelectorAll('.sections'),
   btns = document.querySelectorAll('.sections__toggle');
 
@@ -21,4 +21,7 @@
   for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', toggleItem, false);
   }
-}
+})();
+
+
+

@@ -1,5 +1,6 @@
 'use strict';
-{
+
+(function () {
   const phoneInputs = document.querySelectorAll('[data-type="tel"]');
 
   let setCursorPosition = (pos, elem) => {
@@ -45,4 +46,5 @@
       input.addEventListener('focus', createMask);
       input.addEventListener('blur', createMask);
   });
-}
+})();
+
