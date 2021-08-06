@@ -3,17 +3,8 @@
   width: 100%;
   top: 0;
   left: 0;
-  // min-height: 878px;
   padding: 33px;
   background-color: $dark-gray;
-  // background-image: url("../img/desktop-main-bg@1x.png");
-  // background-repeat: no-repeat;
-  // background-position: top center;
-  // background-size: cover;
-
-  // @media (min-resolution: 2dppx) {
-  //   background-image: url("../img/desktop-main-bg@2x.png");
-  // }
 
   @media (max-width: $desktop-width) {
     min-height: 683px;

@@ -34,7 +34,6 @@
     document.addEventListener('keydown', onPopupEscPress);
     overlayCall.addEventListener('click', closePopup);
     nameInputCall.focus();
-    popupCall.focus();
   };
 
   const closePopup = (evt) => {
