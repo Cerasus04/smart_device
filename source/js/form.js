@@ -61,7 +61,7 @@
         } else {
           checkboxLabel.classList.remove('modal--error');
         }
-        if (phone.value.length !== 18) {
+        if (phone.value.length !== 17) {
           evt.preventDefault();
           phone.classList.add('modal--error');
         } else {

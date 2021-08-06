@@ -21,7 +21,7 @@
 
   @media (max-width: $tablet-width) {
     &::after {
-      bottom: 13%;
+      bottom: 16%;
     }
   }
 
@@ -244,7 +244,9 @@
     margin-right: 20px;
     margin-top: 13px;
   }
-
+  @media (max-width: $desktop) {
+    width: 44%;
+  }
   @media (max-width: $desktop-width) {
     display: none;
   }
@@ -255,6 +257,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 59%;
+
+  @media (max-width: $desktop) {
+    width: 47%;
+  }
 
   & a {
     margin: 13px 0 13px 20px;
