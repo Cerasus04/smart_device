@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "Roboto Condensed";
-  src: url("../fonts/robotoCondensed-regular.woff2") format("woff2"), url("../fonts/robotoCondensed-regular.woff") format("woff");
+  src: url("../fonts/robotocondensed-regular.woff2") format("woff2"), url("../fonts/robotocondensed-regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap; }
@@ -153,7 +153,7 @@ input[type="radio"].visually-hidden {
   margin-left: 12px;
   padding: 6px 0 0 69px;
   z-index: 10;
-  cursor: none; }
+  cursor: pointer; }
   .header__logo svg {
     position: absolute;
     top: 0;
@@ -278,7 +278,7 @@ input[type="radio"].visually-hidden {
           justify-content: space-between;
   min-height: 878px;
   margin: 0 auto;
-  padding-top: 14%;
+  padding-top: 272px;
   background-color: #1b2d37;
   background-image: url("../img/desktop-main-bg@1x.png");
   background-repeat: no-repeat;
@@ -454,7 +454,7 @@ input[type="radio"].visually-hidden {
 
 .promo__link {
   position: absolute;
-  bottom: -129px;
+  top: 466px;
   left: 32px;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
@@ -1218,7 +1218,7 @@ input[type="radio"].visually-hidden {
       bottom: 65px; } }
   @media (max-width: 767px) {
     .footer::after {
-      bottom: 13%; } }
+      bottom: 16%; } }
   @media (max-width: 320px) {
     .footer::after {
       bottom: 105px; } }
@@ -1422,6 +1422,9 @@ input[type="radio"].visually-hidden {
   .footer__rights-wrap1 p {
     margin-right: 20px;
     margin-top: 13px; }
+  @media (max-width: 1440px) {
+    .footer__rights-wrap1 {
+      width: 44%; } }
   @media (max-width: 1023px) {
     .footer__rights-wrap1 {
       display: none; } }
@@ -1436,6 +1439,9 @@ input[type="radio"].visually-hidden {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 59%; }
+  @media (max-width: 1440px) {
+    .footer__rights-wrap2 {
+      width: 47%; } }
   .footer__rights-wrap2 a {
     margin: 13px 0 13px 20px; }
     .footer__rights-wrap2 a:hover, .footer__rights-wrap2 a:focus {
