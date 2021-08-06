@@ -119,16 +119,8 @@ input[type="radio"].visually-hidden {
   width: 100%;
   top: 0;
   left: 0;
-  min-height: 878px;
   padding: 33px;
-  background-color: #1b2d37;
-  background-image: url("../img/desktop-main-bg@1x.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover; }
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-    .header {
-      background-image: url("../img/desktop-main-bg@2x.png"); } }
+  background-color: #1b2d37; }
   @media (max-width: 1023px) {
     .header {
       min-height: 683px;
@@ -284,25 +276,35 @@ input[type="radio"].visually-hidden {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 1556px;
   min-height: 878px;
   margin: 0 auto;
-  padding-top: 272px;
-  z-index: 10px; }
+  padding-top: 14%;
+  background-color: #1b2d37;
+  background-image: url("../img/desktop-main-bg@1x.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .promo {
+      background-image: url("../img/desktop-main-bg@2x.png"); } }
   @media (max-width: 1023px) {
     .promo {
       min-height: 683px;
-      padding-top: 145px;
-      overflow: hidden; } }
+      padding-top: 145px; } }
+  @media (max-width: 768px) {
+    .promo {
+      padding-top: 113px; } }
   @media (max-width: 767px) {
     .promo {
-      min-height: 647px;
-      padding-top: 270px; } }
+      min-height: 647px; } }
+  @media (max-width: 320px) {
+    .promo {
+      padding-top: 90px; } }
   .promo::after {
     content: "";
     position: absolute;
     top: 116px;
-    right: 35px;
+    right: 220px;
     width: 671px;
     height: 641px;
     background-image: url("../img/icon/rectangle-dt.svg");
@@ -317,7 +319,16 @@ input[type="radio"].visually-hidden {
         background-image: url("../img/icon/rectangle-mobile.svg");
         right: -500px; } }
 
+.promo__container {
+  max-width: 1556px;
+  width: 100%;
+  margin: 0 auto; }
+  @media (max-width: 1023px) {
+    .promo__container {
+      overflow: hidden; } }
+
 .promo__wrapper {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -389,15 +400,21 @@ input[type="radio"].visually-hidden {
     .promo__wrapper {
       padding-left: 87px;
       width: 70%; } }
+  @media (max-width: 768px) {
+    .promo__wrapper {
+      padding-top: 31px; } }
   @media (max-width: 767px) {
     .promo__wrapper {
-      padding: 15px;
+      padding: 250px 15px 15px;
       width: 100%;
       max-width: 525px;
       margin: 0 auto; } }
+  @media (max-width: 320px) {
+    .promo__wrapper {
+      padding-top: 194px; } }
 
 .promo__btn {
-  margin-left: 97px; }
+  margin: 0 auto 20px 97px; }
   @media (max-width: 1023px) {
     .promo__btn {
       margin-left: 53px; } }
@@ -437,7 +454,7 @@ input[type="radio"].visually-hidden {
 
 .promo__link {
   position: absolute;
-  bottom: 128px;
+  bottom: -129px;
   left: 32px;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
@@ -450,24 +467,26 @@ input[type="radio"].visually-hidden {
 
 .promo__img {
   position: absolute;
-  top: 258px;
-  right: -4px;
-  width: 45%;
+  top: -13px;
+  right: -93%;
   z-index: -1; }
+  @media (max-width: 1440px) {
+    .promo__img {
+      width: 95%; } }
   @media (max-width: 1023px) {
     .promo__img {
-      bottom: unset;
-      top: 113px;
-      right: -205px;
-      width: 60%; }
+      top: 0;
+      right: -80%;
+      width: 85%; }
       .promo__img img {
         width: 465px;
         height: 340px; } }
+  @media (max-width: 768px) {
+    .promo__img {
+      top: 0; } }
   @media (max-width: 767px) {
     .promo__img {
-      height: 305px;
-      top: 92px;
-      right: -27px;
+      right: -8%;
       -o-object-fit: cover;
          object-fit: cover; }
       .promo__img img {
@@ -1522,7 +1541,8 @@ input[type="radio"].visually-hidden {
     margin: 0; }
   .sections__site-block a {
     color: rgba(27, 45, 55, 0.5);
-    letter-spacing: -0.05em; }
+    letter-spacing: -0.05em;
+    outline: none; }
 
 .sections__site-list {
   padding: 0;
