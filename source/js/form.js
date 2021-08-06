@@ -16,7 +16,13 @@
       phoneInput = document.querySelector('#tel'),
       nameInput = document.querySelector('#name'),
       checkbox = document.querySelector('#checked'),
-      checkboxFeedback = document.querySelector('.feedback__form-checkbox');
+      checkboxFeedback = document.querySelector('.feedback__form-checkbox'),
+
+      focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
+      modal = document.querySelector('#modal'),
+      firstFocusableElement = modal.querySelectorAll(focusableElements)[0],
+      focusableContent = modal.querySelectorAll(focusableElements),
+      lastFocusableElement = focusableContent[focusableContent.length - 1];
 
   const onPopupEscPress = (evt) => {
     if (evt.key === 'Escape') {
@@ -71,6 +77,28 @@
 
     button.addEventListener('click', validity);
   };
+
+document.addEventListener('keydown', function(e) {
+  let isTabPressed = e.key === 'Tab' || e.key === 9;
+
+  if (!isTabPressed) {
+    return;
+  }
+
+  if (e.shiftKey) {
+    if (document.activeElement === firstFocusableElement) {
+      lastFocusableElement.focus();
+      e.preventDefault();
+    }
+  } else {
+    if (document.activeElement === lastFocusableElement) {
+      firstFocusableElement.focus();
+      e.preventDefault();
+    }
+  }
+});
+
+firstFocusableElement.focus();
 
   feedbackBtn.addEventListener('click', validityForm(checkbox, checkboxFeedback, phoneInput, nameInput, feedbackBtn));
   submitBtn.addEventListener('click', validityForm(checkCall, checkboxLabel, phoneInputCall, nameInputCall, submitBtn));

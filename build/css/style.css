@@ -1580,7 +1580,8 @@ input[type="radio"].visually-hidden {
       -ms-flex-direction: column;
           flex-direction: column; }
   .sections__address-block a {
-    color: rgba(27, 45, 55, 0.5); }
+    color: rgba(27, 45, 55, 0.5);
+    outline: none; }
   .sections__address-block p {
     margin: 0 0 5px; }
   @media (max-width: 767px) {
