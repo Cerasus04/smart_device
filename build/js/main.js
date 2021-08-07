@@ -3,19 +3,18 @@
   const list = document.querySelectorAll('.sections'),
   btns = document.querySelectorAll('.sections__toggle');
 
-  const btnsActive = function () {
+  if (window.matchMedia("(min-width: 767px)").matches) {
     for (let i = 0; i < btns.length; i++) {
-      btns[i].disabled = !btns[i].disabled;
+      btns[i].setAttribute("disabled", true);
     }
-  };
+  } else {
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].removeAttribute("disabled");
+    }
+  }
 
   for (let k = 0; k < list.length; k++) {
     list[k].classList.remove('sections--nojs');
-    // list[k].classList.add('sections--active');
-  }
-
-  if (list.classList.contains('sections--active')) {
-    btnsActive();
   }
 
   const toggleItem = function() {
